@@ -1,0 +1,53 @@
+.Main__topbar {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Main__tasks {
+    display: flex;
+    justify-content: space-evenly;
+    max-height: calc(100vh - 5rem - 6rem);
+    overflow: hidden;
+}
+
+.Main__taskColumn {
+    max-height: 90%;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+.Main__taskColumn::-webkit-scrollbar {
+    display: none;
+}
+
+.Main__taskColumn > * {
+    margin-bottom: 1.5rem;
+}
+
+.Main__tools {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Main__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid gray;
+    padding: 0.5rem 1rem;
+    min-width: 8rem;
+    color: #333;
+    border-radius: 3px;
+}
+
+.Main__btn:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.Main__btn--filter {
+    background-color: rgb(56, 132, 255);
+    color: white;
+    border: 0;
+}

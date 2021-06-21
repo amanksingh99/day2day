@@ -1,0 +1,16 @@
+.Label {
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: pink;
+    border-radius: 5px;
+    width: 5rem;
+    color: #333;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Label:hover {
+    cursor: pointer;
+}

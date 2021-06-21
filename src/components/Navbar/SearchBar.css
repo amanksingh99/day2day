@@ -1,0 +1,30 @@
+:root {
+    --searchbar-color: #f5f7fb;
+}
+
+.SearchBar {
+    background-color: var(--searchbar-color);
+    width: 40rem;
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+.SearchBar > input {
+    border: 0;
+    width: 90%;
+    background-color: var(--searchbar-color);
+    height: 100%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.SearchBar > input:focus {
+    outline: none;
+}
+
+.search-icon {
+    font-size: 1.3rem;
+}

@@ -1,0 +1,48 @@
+.Card {
+    width: 18rem;
+    height: 14rem;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    padding: 1rem;
+    position: relative;
+}
+
+.Card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Card h5 {
+    font-family: "Open Sans";
+    font-size: 1.2rem;
+}
+
+.Menu-icon {
+    position: absolute;
+    right: 0;
+    color: #777;
+}
+.Menu-icon:hover {
+    cursor: pointer;
+}
+
+.Card__bottom-menu {
+    display: flex;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.Card__bottom-menu > * {
+    margin-right: 1rem;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #777;
+    display: none;
+}
+.edit-icon:hover {
+    cursor: pointer;
+}

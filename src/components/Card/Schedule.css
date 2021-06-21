@@ -1,0 +1,14 @@
+.Schedule {
+    font-size: 12px;
+    color: #333;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 5px;
+    min-width: 5rem;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.Schedule:hover {
+    cursor: pointer;
+}
