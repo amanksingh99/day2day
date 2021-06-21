@@ -1,6 +1,6 @@
 .Card {
     width: 18rem;
-    height: 14rem;
+    min-height: 12rem;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
@@ -15,6 +15,7 @@
 .Card h5 {
     font-family: "Open Sans";
     font-size: 1.2rem;
+    margin-bottom: 3rem;
 }
 
 .Menu-icon {
@@ -29,20 +30,10 @@
 .Card__bottom-menu {
     display: flex;
     width: 100%;
-    margin-top: 5rem;
+    position: absolute;
+    bottom: 1rem;
 }
 
 .Card__bottom-menu > * {
     margin-right: 1rem;
-}
-
-.edit-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: #777;
-    display: none;
-}
-.edit-icon:hover {
-    cursor: pointer;
 }

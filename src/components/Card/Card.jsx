@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MdMoreVert, MdModeEdit } from "react-icons/md";
+import { MdMoreVert } from "react-icons/md";
 import Label from "./Label";
 import Schedule from "./Schedule";
 import ProjectTag from "./ProjectTag";
@@ -10,13 +10,12 @@ export default class Card extends Component {
         return (
             <div className="Card">
                 <MdMoreVert className="Menu-icon" />
-                <Label text={"UI Design"} />
-                <h5>Low fidelity wireframes</h5>
+                <Label text={this.props.label} />
+                <h5>{this.props.text}</h5>
                 <div className="Card__bottom-menu">
-                    <Schedule />
-                    <ProjectTag />
+                    <Schedule text={this.props.schedule} />
+                    <ProjectTag text={this.props.project} />
                 </div>
-                <MdModeEdit className="edit-icon" />
             </div>
         );
     }

@@ -1,3 +1,7 @@
+.Main {
+    height: 100vh;
+}
+
 .Main__topbar {
     padding: 0 1rem;
     display: flex;
@@ -11,10 +15,18 @@
     overflow: hidden;
 }
 
+.Main__tasks h3 {
+    margin-left: 1rem;
+}
+
 @media (max-width: 1250px) {
     .Main__tasks {
         overflow: auto;
         justify-content: flex-start;
+        gap: 1.1rem;
+    }
+    .Main__tasks::-webkit-scrollbar {
+        display: none;
     }
 }
 
@@ -22,6 +34,7 @@
     max-height: 90%;
     overflow-y: scroll;
     padding: 1rem;
+    min-width: 20rem;
 }
 .Main__taskColumn::-webkit-scrollbar {
     display: none;
@@ -36,5 +49,3 @@
     display: flex;
     justify-content: flex-end;
 }
-
-

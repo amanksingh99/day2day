@@ -6,7 +6,7 @@ export default class Schedule extends Component {
         return (
             <div className="Schedule">
                 <span>
-                    <FiCalendar /> Schedule
+                    <FiCalendar /> {this.props.text}
                 </span>
             </div>
         );

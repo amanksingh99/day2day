@@ -21,8 +21,48 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 export default class Main extends Component {
-   
+    constructor(props) {
+        super(props);
+        this.state = {
+            tasks: [
+                {
+                    id: "#1",
+                    label: "UI Design",
+                    text: "improve UI of todo app improve UI of todo app improve UI of todo app improve UI of todo app",
+                    schedule: "Schedule",
+                    project: "Project",
+                    state: "completed",
+                },
+                {
+                    id: "#2",
+                    label: "Feature Update",
+                    text: "add modal",
+                    schedule: "Tomorrow",
+                    project: "Project",
+                    state: "progress",
+                },
+                {
+                    id: "#3",
+                    label: "UX Design",
+                    text: "UX for todo app",
+                    schedule: "Schedule",
+                    project: "Cross Platform Spreadsheet App",
+                    state: "backlog",
+                },
+            ],
+        };
+    }
     render() {
+        let backlogTasks = this.state.tasks.filter(
+            (task) => task.state === "backlog"
+        );
+        let progressTasks = this.state.tasks.filter(
+            (task) => task.state === "progress"
+        );
+        let completedTask = this.state.tasks.filter(
+            (task) => task.state === "completed"
+        );
+
         return (
             <div className="Main">
                 <div className="Main__topbar">
@@ -36,28 +76,50 @@ export default class Main extends Component {
                     <div className="Main__backlog">
                         <h3>Backlog</h3>
                         <div className="Main__taskColumn">
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
+                            {backlogTasks.map((taskObj) => {
+                                return (
+                                    <Card
+                                        key={taskObj.id}
+                                        text={taskObj.text}
+                                        label={taskObj.label}
+                                        schedule={taskObj.schedule}
+                                        project={taskObj.project}
+                                    />
+                                );
+                            })}
                         </div>
                     </div>
                     <div className="Main__progress">
                         <h3>In progress</h3>
+
                         <div className="Main__taskColumn">
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
+                            {progressTasks.map((taskObj) => {
+                                return (
+                                    <Card
+                                        key={taskObj.id}
+                                        text={taskObj.text}
+                                        label={taskObj.label}
+                                        schedule={taskObj.schedule}
+                                        project={taskObj.project}
+                                    />
+                                );
+                            })}
                         </div>
                     </div>
                     <div className="Main__completed">
                         <h3>Completed</h3>
                         <div className="Main__taskColumn">
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
+                            {completedTask.map((taskObj) => {
+                                return (
+                                    <Card
+                                        key={taskObj.id}
+                                        text={taskObj.text}
+                                        label={taskObj.label}
+                                        schedule={taskObj.schedule}
+                                        project={taskObj.project}
+                                    />
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

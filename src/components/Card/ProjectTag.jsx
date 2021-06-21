@@ -5,11 +5,16 @@ import "./ProjectTag.css";
 
 export default class ProjectTag extends Component {
     render() {
+        let text =
+            this.props.text.length <= 12
+                ? this.props.text
+                : this.props.text.slice(0, 12) + "...";
+
         return (
             <div className="ProjectTag">
                 <FiTag />
                 &nbsp;
-                <span>Excel Clone</span>
+                <span>{text}</span>
             </div>
         );
     }
