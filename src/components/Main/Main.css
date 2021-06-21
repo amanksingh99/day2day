@@ -11,6 +11,13 @@
     overflow: hidden;
 }
 
+@media (max-width: 1250px) {
+    .Main__tasks {
+        overflow: auto;
+        justify-content: flex-start;
+    }
+}
+
 .Main__taskColumn {
     max-height: 90%;
     overflow-y: scroll;
@@ -27,27 +34,7 @@
 .Main__tools {
     width: 50%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
 }
 
-.Main__btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid gray;
-    padding: 0.5rem 1rem;
-    min-width: 8rem;
-    color: #333;
-    border-radius: 3px;
-}
 
-.Main__btn:hover {
-    cursor: pointer;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-}
-
-.Main__btn--filter {
-    background-color: rgb(56, 132, 255);
-    color: white;
-    border: 0;
-}
