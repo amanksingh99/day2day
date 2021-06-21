@@ -5,7 +5,7 @@ export default class Brand extends Component {
     render() {
         return (
             <div className="Brand">
-                <h2>TaskTrack</h2>
+                <h2>day2day</h2>
             </div>
         );
     }
