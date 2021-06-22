@@ -26,7 +26,7 @@ export default class Main extends Component {
         this.state = {
             tasks: [
                 {
-                    id: "#1",
+                    id: 1,
                     label: "UI Design",
                     text: "improve UI of todo app improve UI of todo app improve UI of todo app improve UI of todo app",
                     schedule: "Schedule",
@@ -34,7 +34,7 @@ export default class Main extends Component {
                     state: "completed",
                 },
                 {
-                    id: "#2",
+                    id: 2,
                     label: "Feature Update",
                     text: "add modal",
                     schedule: "Tomorrow",
@@ -42,7 +42,7 @@ export default class Main extends Component {
                     state: "progress",
                 },
                 {
-                    id: "#3",
+                    id: 3,
                     label: "UX Design",
                     text: "UX for todo app",
                     schedule: "Schedule",
@@ -52,6 +52,29 @@ export default class Main extends Component {
             ],
         };
     }
+
+    createTask = ({
+        taskText,
+        labelText = "Label",
+        scheduleDate = "Schedule",
+        projectText = "Project",
+        state,
+    }) => {
+        let allTasks = [...this.state.tasks];
+        let id = allTasks.length + 1;
+        let newTasks = [
+            {
+                id,
+                text: taskText,
+                label: labelText,
+                schedule: scheduleDate,
+                project: projectText,
+                state,
+            },
+            ...allTasks,
+        ];
+        this.setState({ tasks: newTasks });
+    };
     render() {
         let backlogTasks = this.state.tasks.filter(
             (task) => task.state === "backlog"
@@ -68,7 +91,10 @@ export default class Main extends Component {
                 <div className="Main__topbar">
                     <h1>Tasks</h1>
                     <div className="Main__tools">
-                        <AddTask customStyles={customStyles} />
+                        <AddTask
+                            customStyles={customStyles}
+                            createTask={this.createTask}
+                        />
                         <FilterTask customStyles={customStyles} />
                     </div>
                 </div>

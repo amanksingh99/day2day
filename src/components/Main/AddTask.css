@@ -1,0 +1,14 @@
+.AddTaskForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskOptions {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.taskOptions > * {
+    margin-bottom: 1rem;
+}
