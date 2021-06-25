@@ -10,7 +10,7 @@ export default class Card extends Component {
         return (
             <div className="Card">
                 <MdMoreVert className="Menu-icon" />
-                <Label text={this.props.label} />
+                <Label labelData={this.props.label} />
                 <h5>{this.props.text}</h5>
                 <div className="Card__bottom-menu">
                     <Schedule text={this.props.schedule} />

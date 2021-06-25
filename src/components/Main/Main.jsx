@@ -27,27 +27,11 @@ export default class Main extends Component {
             tasks: [
                 {
                     id: 1,
-                    label: "UI Design",
-                    text: "improve UI of todo app improve UI of todo app improve UI of todo app improve UI of todo app",
+                    label: ['UI Design', 'pink', '#333'],
+                    text: "improve UI of todo app",
                     schedule: "Schedule",
                     project: "Project",
                     state: "completed",
-                },
-                {
-                    id: 2,
-                    label: "Feature Update",
-                    text: "add modal",
-                    schedule: "Tomorrow",
-                    project: "Project",
-                    state: "progress",
-                },
-                {
-                    id: 3,
-                    label: "UX Design",
-                    text: "UX for todo app",
-                    schedule: "Schedule",
-                    project: "Cross Platform Spreadsheet App",
-                    state: "backlog",
                 },
             ],
         };
