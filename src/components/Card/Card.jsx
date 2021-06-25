@@ -13,7 +13,7 @@ export default class Card extends Component {
                 <Label labelData={this.props.label} />
                 <h5>{this.props.text}</h5>
                 <div className="Card__bottom-menu">
-                    <Schedule text={this.props.schedule} />
+                    <Schedule scheduleData={this.props.schedule} />
                     <ProjectTag text={this.props.project} />
                 </div>
             </div>

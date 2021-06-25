@@ -1,7 +1,7 @@
 .Label {
     font-size: 12px;
     padding: 5px 10px;
-    width: 7rem;
+    max-width: 6.5rem;
     border-radius: 5px;
     min-height: 1.5rem;
     color: #333;

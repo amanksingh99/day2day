@@ -29,9 +29,17 @@ export default class Main extends Component {
                     id: 1,
                     label: ['UI Design', 'pink', '#333'],
                     text: "improve UI of todo app",
-                    schedule: "Schedule",
+                    schedule: ['Schedule','lightgray'],
                     project: "Project",
                     state: "completed",
+                },
+                {
+                    id: 2,
+                    label: ['UI Design', 'pink', '#333'],
+                    text: "improve UI of todo app",
+                    schedule: ['Schedule','lightgray'],
+                    project: "Project",
+                    state: "backlog",
                 },
             ],
         };
@@ -46,17 +54,47 @@ export default class Main extends Component {
     }) => {
         let allTasks = [...this.state.tasks];
         let id = allTasks.length + 1;
+
+        //creating label data
+        let label = [labelText];
+        if(labelText==='Label'){
+            label.push('gray','white');
+        } else if(labelText==='UI Design'){
+            label.push('pink', '#333');
+        } else if(labelText==='Bug Fix'){
+            label.push('lightgreen', '#333');
+        } else if(labelText === 'Feature Update'){
+            label.push('#0066ff', 'white');
+        } else if(labelText === 'UX Design'){
+            label.push('tomato', 'white');
+        }
+
+        //creating schedule data
+        let schedule = [scheduleDate];
+        if(scheduleDate=== 'Schedule'){
+            schedule.push('lightgray');
+        }else if(state === 'backlog'){
+            schedule.push('red');
+        } else if(state === 'progress'){
+            schedule.push('blue');
+        } else if(state==='completed'){
+            schedule.push('green');
+        }
+
+        //new task array
         let newTasks = [
             {
                 id,
                 text: taskText,
-                label: labelText,
-                schedule: scheduleDate,
+                label,
+                schedule,
                 project: projectText,
                 state,
             },
             ...allTasks,
         ];
+
+        //updating state
         this.setState({ tasks: newTasks });
     };
     render() {

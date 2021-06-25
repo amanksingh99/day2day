@@ -45,6 +45,9 @@ export default class AddTask extends Component {
             state = "backlog";
         }
 
+        if(taskText===''){
+            return;
+        }
         this.props.createTask({
             taskText,
             labelText,
