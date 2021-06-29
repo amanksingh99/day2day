@@ -24,24 +24,7 @@ export default class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tasks: [
-                {
-                    id: 1,
-                    label: ['UI Design', 'pink', '#333'],
-                    text: "improve UI of todo app",
-                    schedule: ['Schedule','lightgray'],
-                    project: "Project",
-                    state: "completed",
-                },
-                {
-                    id: 2,
-                    label: ['UI Design', 'pink', '#333'],
-                    text: "improve UI of todo app",
-                    schedule: ['Schedule','lightgray'],
-                    project: "Project",
-                    state: "backlog",
-                },
-            ],
+            tasks: [],
         };
     }
 
